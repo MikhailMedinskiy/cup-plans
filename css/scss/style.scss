@@ -19,12 +19,12 @@
 }
 
 body{
-	color: #fff;
-	min-width: 310px;
-	background: #fff;
+	color: #000;
+	min-width: 320px;
 	line-height: 1.6;
 	font-size: 16px;
-	font-family: "RobotoRegular", sans-serif;
+	font-family: "miso", sans-serif;
+	color: #333333;
 }
 
 
@@ -32,3 +32,55 @@ body{
  CUSTOM CODE GOES HERE
 --------------------------*/
 
+.wrapper{
+	background-color: #FDDE7E;
+}
+
+.container{
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+	justify-content: space-around;
+	align-items: center;
+	width: 1170px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.block{
+	background: #fff;
+	max-width: 360px;
+	border-radius: 3px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	transition: 0.3s;
+	box-shadow: 0px  1px  7px -2px #000;
+	&__price{
+		padding-top: 7px;
+		font-size: 70px;
+		color: #02995b;
+		font-weight: 600;
+	}
+	&__img{
+		padding-left: 25px;
+	}
+	&__title{
+		margin: 0;
+		font-size: 56px;
+		color: #333333;
+		font-weight: 300;
+	}
+	&__desc{
+		font-size: 20px;
+		padding: 0 120px 35px 120px;
+		font-weight: 300;
+	}
+	&--tall{
+		height: 500px;
+	}
+	&:hover{
+		transform: scale(1.3);
+	}
+}
