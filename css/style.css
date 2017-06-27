@@ -62,8 +62,7 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -262,8 +261,7 @@ button:-moz-focusring,
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -298,8 +296,7 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -490,26 +487,31 @@ template {
 .fa-rotate-90 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   transform: rotate(90deg); }
 
 .fa-rotate-180 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
   -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
 
 .fa-rotate-270 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
   transform: rotate(270deg); }
 
 .fa-flip-horizontal {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
   transform: scale(-1, 1); }
 
 .fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
   transform: scale(1, -1); }
 
 :root .fa-rotate-90,
@@ -517,8 +519,7 @@ template {
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  -webkit-filter: none;
-          filter: none; }
+  filter: none; }
 
 .fa-stack {
   position: relative;
@@ -2712,8 +2713,7 @@ template {
   margin: 0;
   padding: 0;
   outline: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
 
 body {
   color: #000;
@@ -2730,41 +2730,26 @@ body {
   background-color: #FDDE7E; }
 
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   height: 100vh;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   width: 1170px;
   margin: 0 auto;
   text-align: center; }
 
 .block {
   background: #fff;
-  max-width: 360px;
+  min-width: 360px;
   border-radius: 3px;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-transition: 0.3s;
+  flex-direction: column;
+  justify-content: space-around;
   transition: 0.3s;
-  -webkit-box-shadow: 0px  1px  7px -2px #000;
-          box-shadow: 0px  1px  7px -2px #000; }
+  box-shadow: 0px  1px  7px -2px #000;
+  align-items: center; }
   .block__price {
     padding-top: 7px;
     font-size: 70px;
@@ -2779,10 +2764,12 @@ body {
     font-weight: 300; }
   .block__desc {
     font-size: 20px;
-    padding: 0 120px 35px 120px;
-    font-weight: 300; }
+    width: 30%;
+    font-weight: 300;
+    padding-bottom: 35px; }
   .block--tall {
     height: 500px; }
   .block:hover {
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3); }
+    transform: scale(1.3); }
+
+/*# sourceMappingURL=style.css.map */
